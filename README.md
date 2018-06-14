@@ -70,9 +70,14 @@ Maven学习笔记
 
 ```cmd
     	1. groupId:公司名字+项目名
-    	2. artifactId：项目名+模块名
-    	3. varsion:版本号
-	
+    	2. artifactId：项目名+模块名，产品Id
+    	3. version:版本号
+	坐标：groupId+artifactId+version
+	目录也是按照组——》构建物——》版本号的顺序
+```
+**jar包的组成**
+```cmd
+	artifactId-version.jar
 ```
 
 **仓库：**
@@ -151,10 +156,10 @@ C:\Users\用户\.m2\repository\com\tiakon\demo
         第二个0表示分支版本号
         第三个0表示小版本号
         0.0.1
-        snapshot    快照
+        snapshot    快照，测试版本，镜像版本
         alpha       内部测试
         beta        公测
-        Release     稳定
+        Release     稳定，发型版本，最终版本
         GA          正式发布
     -->
     <!--
@@ -168,7 +173,7 @@ C:\Users\用户\.m2\repository\com\tiakon\demo
     </properties>
 
     <!--
-        项目名
+        项目名，可写可不写
         <name></name>
         项目地址
         <url></url>
@@ -193,8 +198,8 @@ C:\Users\用户\.m2\repository\com\tiakon\demo
         <artifactId>junit</artifactId>
         <version>RELEASE</version>
         <!--<type></type>-->
-        <!--依赖范围-->
-        <!--<scope></scope>-->
+        <!--依赖的jar包使用范围：当测试时使用该jar包（test、compile默认） -->
+        <!--<scope>test</scope>--> 
         <!--设置依赖是否可选（默认）false-->
         <!--<optional></optional>-->
         <!--排斥依赖传递列表-->
@@ -204,7 +209,7 @@ C:\Users\用户\.m2\repository\com\tiakon\demo
                     </exclusion>
                 </exclusions>
             -->
-    </dependency>
+    </dependency>  
 </dependencies>
 <!--依赖的管理，作用主要定义在父模块中，对子模块进行管理-->
 <!--
