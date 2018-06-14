@@ -72,6 +72,7 @@ Maven学习笔记
     	1. groupId:公司名字+项目名
     	2. artifactId：项目名+模块名
     	3. varsion:版本号
+	
 ```
 
 **仓库：**
