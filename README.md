@@ -30,9 +30,12 @@ Maven学习笔记
 	   -main
 	        -java
 	             -package
+		-resources
 	   -test
 	        -java
 	             -package
+		-resources
+	-target:编译后输出的文件目录
 	-pom.xml
 ```
 
